@@ -2,7 +2,7 @@
     <nav v-if="shouldShowPagination">
         <ul class="pagination justify-content-center">
             <li :class="{ disabled: pagination.currentPage === 1 }">
-                <a :class="{ disabled: pagination.currentPage === 1 }"
+                <a class="page-link" :class="{ disabled: pagination.currentPage === 1 }"
                    @click="pageClicked( pagination.currentPage - 1 )">
                     <i class="left chevron icon">«</i>
                 </a>
@@ -20,7 +20,7 @@
                 <a class="page-link" @click="pageClicked(pagination.totalPages)">{{pagination.totalPages}}</a>
             </li>
             <li>
-                <a :class="{ disabled: pagination.currentPage === pagination.totalPages }"
+                <a class="page-link" :class="{ disabled: pagination.currentPage === pagination.totalPages }"
                    @click="pageClicked( pagination.currentPage + 1 )">
                     <i class="right chevron icon">»</i>
                 </a>
